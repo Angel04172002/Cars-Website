@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Angel Iliev">
+    <meta name="description" content="This is a website about cars">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Cars </title>
+
+    <link rel="stylesheet" href="Styles/carsStyle.css">
+
+    <script>
+        window.onload = function () {
+            localStorage.removeItem("reviews");
+        };
+    </script>
+
+    <script src="Scripts/carsScript.js">
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+
+    <div class="carContainer">
+
+     
+
+
+        <div class="info">
+
+            <img src="Images/tesla.png" alt="Tesla S">
+
+
+            <div class="descriptionsAndPrice">
+
+
+                <h1>Tesla S</h1>
+
+                <h2> Short description </h2>
+
+
+                <p class="short-description"> 
+                    The Tesla S 2022 is an all-electric luxury sedan that revolutionizes the automotive industry with its cutting-edge technology, impressive performance, and sustainable design.
+                </p>
+
+
+                <h2> Long description </h2>
+
+                <p class="long-description">
+
+                    As Tesla's flagship model, the Model S showcases sleek lines, aerodynamic features, and a minimalist aesthetic.
+
+                    Powered entirely by electricity, the Tesla S 2022 offers exceptional acceleration and responsiveness. Furthermore, the Tesla S 2022 prioritizes safety with a host of advanced driver-assistance systems, including collision avoidance, emergency braking, and adaptive cruise control. 
+                </p>
+
+
+                <div class="price">
+                    <h3> Price: </h3>
+                    <p> $104,490 </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="buttons">
+            
+            <button class="open-button" onclick="openMyForm()"> Purchase </button>
+            <button class="open-button" style="right: 110px" onclick="openReviewsForm()"> Reviews </button>
+        </div>
+
+
+
+
+
+    
+        <div class="form-popup" id="myForm">
+            <form class="form-container" onsubmit="return boughtCar()">
+                <h1>Tesla S</h1>
+
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="address"><strong>Address</strong></label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+
+                <input type="submit" class="btn" value="Purchase">
+                <button type="button" class="btn cancel" onclick="closeMyForm()">Close</button>
+
+
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="form-popup" id="reviewForm">
+            <form class="form-container" onsubmit="return submitReview()">
+                <h1>Tesla S</h1>
+
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" id="nameReviewForm" name="name" placeholder="Enter your name" required>
+
+                <label for="address"><strong>Review</strong></label>
+                <input type="text" id="addressReviewForm" name="address" placeholder="Enter your review" required>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeReviewsForm()">Close</button>
+            </form>
+
+        </div>
+
+
+        </section>
+
+
+
+</body>
+
+
+</html>
