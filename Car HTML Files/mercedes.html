@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Angel Iliev">
+    <meta name="description" content="This is a website about cars">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Cars </title>
+
+    <link rel="stylesheet" href="Styles/carsStyle.css">
+
+    <script>
+        window.onload = function () {
+            localStorage.removeItem("reviews");
+        };
+    </script>
+
+    <script src="Scripts/carsScript.js">
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+
+    <div class="carContainer">
+
+     
+
+
+        <div class="info">
+
+            <img src="Images/mercedes.png" alt="BMW 1 Series">
+
+
+            <div class="descriptionsAndPrice">
+
+
+                <h1>Mercedes CLS</h1>
+
+                <h2> Short description </h2>
+
+
+                <p class="short-description"> The Mercedes CLS 2018 is a luxurious four-door coupe that embodies elegance, sophistication, and performance. 
+                </p>
+
+
+                <h2> Long description </h2>
+
+                <p class="long-description">
+                    As a part of Mercedes-Benz's renowned CLS lineup, this model showcases a seamless fusion of sporty styling and refined craftsmanship.
+
+                    The exterior design of the CLS 2018 is sleek and eye-catching, characterized by its sweeping roofline, muscular contours, and iconic diamond grille. The aerodynamic profile not only enhances the car's visual appeal but also contributes to its fuel efficiency and dynamic performance.
+                </p>
+
+
+                <div class="price">
+                    <h3> Price: </h3>
+                    <p> $76,000 </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="buttons">
+            
+            <button class="open-button" onclick="openMyForm()"> Purchase </button>
+            <button class="open-button" style="right: 110px" onclick="openReviewsForm()"> Reviews </button>
+        </div>
+
+
+
+
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container" onsubmit="return boughtCar()">
+                <h1>Mercedes CLS</h1>
+
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="address"><strong>Address</strong></label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+
+                <input type="submit" class="btn" value="Purchase">
+                <button type="button" class="btn cancel" onclick="closeMyForm()">Close</button>
+
+
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="form-popup" id="reviewForm">
+            <form class="form-container" onsubmit="return submitReview()">
+                <h1>Mercedes CLS</h1>
+
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" id="nameReviewForm" name="name" placeholder="Enter your name" required>
+
+                <label for="address"><strong>Review</strong></label>
+                <input type="text" id="addressReviewForm" name="address" placeholder="Enter your review" required>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeReviewsForm()">Close</button>
+            </form>
+
+        </div>
+
+
+        </section>
+
+
+
+</body>
+
+
+</html>
